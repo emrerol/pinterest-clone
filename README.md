@@ -1,3 +1,13 @@
+# This project is a Pinterest clone (In Progress)
+
+## TechStack
+
+- React
+- Typescript
+- Redux Toolkit
+- React Router V6
+- Firebase
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

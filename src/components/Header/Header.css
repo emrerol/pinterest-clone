@@ -1,0 +1,120 @@
+/* Header General */
+
+.header {
+      display: flex;
+      justify-content: space-between;
+}
+
+
+/* Logo */
+.header__logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.8rem;
+      cursor: pointer;
+      padding: 2.4rem 2.4rem;
+}
+
+.header__logo a span {
+      display: block;
+      margin-left: .6rem;
+      color: var(--logo);
+      font-family: 'Segoe UI';
+      font-weight: 600;
+}
+
+.header__logo a{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+}
+
+.header__logo:hover{
+      text-decoration: none;     
+}
+
+ .header__logo:active{ 
+      animation: buttonEase 200ms ease-in 
+} 
+
+/* Header Nav */
+.header__nav {
+      display: flex;
+      align-items: center;
+      padding-right: 1.8rem;
+      gap: 2rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.header__links {
+      margin-right: 1.6rem;
+}
+
+
+.header__links ul {
+      /* width: 50vw; */
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 4rem;
+      list-style-type: none;
+      font-size: 1.6rem;
+      font-family: 'Segoe UI semibold', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: 600;
+}
+
+.header__links a{
+      text-decoration: none;
+      color: var(--p-dark);
+}
+
+.header__links li a:hover{
+      text-decoration: underline 1.5px solid var(--p-dark);
+}
+
+.header__auth {
+      display: flex;
+      justify-content: space-around;
+      gap: 1rem;
+}
+
+.header__auth__button {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      border: none;
+      padding-top:.9rem;
+      padding-bottom: .9rem;
+      padding-left: 1.3rem;
+      padding-right: 1.3rem;
+      cursor: pointer;
+      border-radius: 25px;
+      font-size: 1.6rem;
+      font-weight: bold;
+}
+
+.header__auth__button:active{
+      animation: buttonEase 300ms ease-in 
+}
+
+.login {
+      background-color: var(--p-red);
+      color: var(--p-white);
+}
+
+.login:hover{
+      background-color: #ad081b;
+}
+
+.register:hover {
+      background-color: #e2e2e2;
+}
+
+@keyframes buttonEase {
+      from{
+            transform: scale(1);
+      }
+      to {
+
+            transform: scale(.9);
+      }
+}

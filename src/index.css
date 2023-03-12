@@ -1,13 +1,46 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Font type decalarations*/
+
+@font-face {
+  font-family: 'Segoe UI';
+  src: local("Segoe UI"), url("./fonts/SEGOEUI.TTF") format("truetype")
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* @font-face {
+  font-family: 'Segoe UI Bold';
+  src: local("Segoe UI Bold"), url("./fonts/SegoeUIBold.ttf") format("truetype")
 }
+
+@font-face {
+  font-family: 'Segoe UI Italic';
+  src: local("Segoe UI Italic"), url("./fonts/SegoeUItalic.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: 'Segoe UI Bold Italic';
+  src: local("Segoe UI Bold Italic"), url("./fonts/SegoeUIBoldItalic.ttf") format("truetype")
+} */
+
+:root {
+  --logo:#CC0000;
+  --p-red: #e60023;
+  --p-dark:#111111;
+  --p-gray:#EFEFEF;
+  --p-white:#FFFFFF;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  }
+
+body {
+  box-sizing: inherit;
+  font-size: inherit;
+}
+
+*,*::after,*::before {
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
