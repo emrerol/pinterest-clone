@@ -1,17 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { LoginRequest } from "../../types/login";
 
-const initialState: LoginRequest = {
+const loginState: LoginRequest = {
   email: "",
   password: "",
 };
 
 const loginSlice = createSlice({
   name: "login",
-  initialState,
+  initialState: loginState,
   reducers: {
-    logIn(state, action) {},
-    logOut(state, action) {},
+    logIn(state, action) {
+      const { type, payload } = action;
+    },
+    logOut(state, action) {
+      const { type, payload } = action;
+    },
   },
 });
 

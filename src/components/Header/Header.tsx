@@ -39,8 +39,12 @@ const Header = () => {
           </ul>
         </nav>
         <div className="header__auth">
-          <button className="header__auth__button login">Oturum Aç</button>
-          <button className="header__auth__button register">Kaydol</button>
+          <button className="header__auth__button header-login">
+            Oturum Aç
+          </button>
+          <button className="header__auth__button header-register">
+            Kaydol
+          </button>
         </div>
       </div>
     </header>

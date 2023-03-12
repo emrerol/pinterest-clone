@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { RegisterRequest } from "../../types/register";
 
-const initialState: RegisterRequest = {
+const registerState: RegisterRequest = {
   email: "",
   age: "",
   password: "",
@@ -9,9 +9,11 @@ const initialState: RegisterRequest = {
 
 const registerSlice = createSlice({
   name: "register",
-  initialState,
+  initialState: registerState,
   reducers: {
-    register(state, action) {},
+    register(state, action) {
+      const { type, payload } = action;
+    },
   },
 });
 

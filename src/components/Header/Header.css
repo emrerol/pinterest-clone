@@ -96,16 +96,16 @@
       animation: buttonEase 300ms ease-in 
 }
 
-.login {
+.header-login {
       background-color: var(--p-red);
       color: var(--p-white);
 }
 
-.login:hover{
+.header-login:hover{
       background-color: #ad081b;
 }
 
-.register:hover {
+.header-register:hover {
       background-color: #e2e2e2;
 }
 
