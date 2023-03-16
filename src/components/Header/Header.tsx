@@ -1,4 +1,5 @@
 import "./Header.css";
+import Button, { BUTTON_TYPES, BUTTON_TEXT } from "../Button/Button";
 
 const Header = () => {
   return (
@@ -39,12 +40,11 @@ const Header = () => {
           </ul>
         </nav>
         <div className="header__auth">
-          <button className="header__auth__button header-login">
-            Oturum Aç
-          </button>
-          <button className="header__auth__button header-register">
-            Kaydol
-          </button>
+          <Button buttonType={BUTTON_TYPES.login} text={BUTTON_TEXT.login} />
+          <Button
+            buttonType={BUTTON_TYPES.register}
+            text={BUTTON_TEXT.register}
+          />
         </div>
       </div>
     </header>

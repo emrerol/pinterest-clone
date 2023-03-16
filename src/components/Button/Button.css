@@ -1,0 +1,41 @@
+@import url('../../index.css');
+
+
+.header__auth__button {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      border: none;
+      padding-top:.9rem;
+      padding-bottom: .9rem;
+      padding-left: 1.3rem;
+      padding-right: 1.3rem;
+      cursor: pointer;
+      border-radius: 25px;
+      font-size: 1.6rem;
+      font-weight: bold;
+}
+
+.header__auth__button:active{
+      animation: buttonEase 300ms ease-in 
+}
+.header--login {
+      background-color: var(--p-red);
+      color: var(--p-white);
+}
+
+.header--login:hover{
+      background-color: #ad081b;
+}
+
+.header--register:hover {
+      background-color: #e2e2e2;
+}
+
+@keyframes buttonEase {
+      from{
+            transform: scale(1);
+      }
+      to {
+
+            transform: scale(.9);
+      }
+}

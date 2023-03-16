@@ -10,11 +10,16 @@ const Login = () => {
   const dispatch = useDispatch();
 
   const loginHandler = () => {
-    dispatch(loginActions.logIn({ email, password }));
+    dispatch(loginActions.logIn(loginState));
   };
   return (
     <div className="login">
-      <form onSubmit={loginHandler}>Login Form</form>
+      <form onSubmit={loginHandler}>
+        <label htmlFor="email">Your Email</label>
+        <input type="email" name="email" id="email" value={email} />
+        <label htmlFor="password">Password</label>
+        <input type="password" name="password" id="password" value={password} />
+      </form>
     </div>
   );
 };

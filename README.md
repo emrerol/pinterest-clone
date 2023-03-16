@@ -7,6 +7,7 @@
 - Redux Toolkit
 - React Router V6
 - Firebase
+- Storybook
 
 # Getting Started with Create React App
 

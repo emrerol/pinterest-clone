@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { RegisterRequest } from "../../types/register";
+import { createNewUser } from "../../utils/firebase/firebase.utils";
 
 const registerState: RegisterRequest = {
   email: "",
-  age: "",
   password: "",
 };
 
@@ -13,6 +13,7 @@ const registerSlice = createSlice({
   reducers: {
     register(state, action) {
       const { type, payload } = action;
+      createNewUser(payload.email, payload.password);
     },
   },
 });
