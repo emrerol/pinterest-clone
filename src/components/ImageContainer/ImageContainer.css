@@ -1,0 +1,43 @@
+.image__container {
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+      overflow: hidden;
+      z-index: -5;
+}
+
+.image__container:nth-child(2),
+.image__container:nth-child(6) {
+      margin-top: 15rem;
+}
+
+.image__container:nth-child(3),
+.image__container:nth-child(5) {
+      margin-top: 22rem;
+}
+
+
+.image__container:nth-child(4){
+      margin-top: 38rem;
+}
+
+
+
+
+.image__container--item {
+      width: 23rem;
+      height: 36rem;
+      margin-top: 1rem;
+      border-radius: 20px;
+      overflow: hidden;
+
+
+}
+ 
+.image__container--item img {
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    
+} 

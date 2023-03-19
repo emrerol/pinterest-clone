@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import "./HeroLayout.css";
 import HeroStickyButton from "../../components/HeroStickyButton/HeroStickyButton";
+import HeroStickyJump from "../../components/HeroStickyJump/HeroStickyJump";
+import ImageContainer from "../../components/ImageContainer/ImageContainer";
 
 const TEXTS = [
   {
@@ -25,7 +27,57 @@ const TEXTS = [
   },
 ];
 
-//TODO: 7 Parçalı bir Image section oluşturulacak. Her bir parça iki adet image alacak
+const IMAGES = [
+  {
+    second:
+      "https://i.pinimg.com/550x/a7/87/20/a78720c39a39ac50a2856420d636d113.jpg",
+
+    first:
+      " https://i.pinimg.com/236x/f1/13/df/f113df475d4566caa0075c6729960fa3.jpg",
+  },
+  {
+    first:
+      "https://i.pinimg.com/550x/a7/87/20/a78720c39a39ac50a2856420d636d113.jpg",
+
+    second:
+      " https://i.pinimg.com/236x/f1/13/df/f113df475d4566caa0075c6729960fa3.jpg",
+  },
+  {
+    second:
+      "https://i.pinimg.com/550x/a7/87/20/a78720c39a39ac50a2856420d636d113.jpg",
+
+    first:
+      " https://i.pinimg.com/236x/f1/13/df/f113df475d4566caa0075c6729960fa3.jpg",
+  },
+  {
+    first:
+      "https://i.pinimg.com/550x/a7/87/20/a78720c39a39ac50a2856420d636d113.jpg",
+
+    second:
+      " https://i.pinimg.com/236x/f1/13/df/f113df475d4566caa0075c6729960fa3.jpg",
+  },
+  {
+    second:
+      "https://i.pinimg.com/550x/a7/87/20/a78720c39a39ac50a2856420d636d113.jpg",
+
+    first:
+      " https://i.pinimg.com/236x/f1/13/df/f113df475d4566caa0075c6729960fa3.jpg",
+  },
+  {
+    first:
+      "https://i.pinimg.com/550x/a7/87/20/a78720c39a39ac50a2856420d636d113.jpg",
+
+    second:
+      " https://i.pinimg.com/236x/f1/13/df/f113df475d4566caa0075c6729960fa3.jpg",
+  },
+  {
+    second:
+      "https://i.pinimg.com/550x/a7/87/20/a78720c39a39ac50a2856420d636d113.jpg",
+
+    first:
+      " https://i.pinimg.com/236x/f1/13/df/f113df475d4566caa0075c6729960fa3.jpg",
+  },
+];
 
 const HeroLayout = () => {
   const [text, setText] = useState(0);
@@ -38,15 +90,32 @@ const HeroLayout = () => {
     return () => clearInterval(interval);
   }, [text]);
 
+  let buttonColor = TEXTS[text].color;
+
   return (
     <section className="hero__section">
-      <h1>sıradaki fikri bulun</h1>
-      {TEXTS.filter((txt) => txt.id === text + 1).map((item) => (
-        <span key={item.id} style={{ color: item.color }}>
-          {item.text}
-        </span>
-      ))}
-      <HeroStickyButton />
+      <div className="hero__section__slide">
+        <div className="hero__section__slide--images">
+          {IMAGES.map((imgFi) => (
+            <ImageContainer
+              firstImage={imgFi.first}
+              secondImage={imgFi.second}
+            />
+          ))}
+        </div>
+        <div className="hero__section__slide--text">
+          <h1>Sıradaki fikri bulun</h1>
+          {TEXTS.filter((txt) => txt.id === text + 1).map((item) => (
+            <span key={item.id} style={{ color: item.color }}>
+              {item.text}
+            </span>
+          ))}
+        </div>
+      </div>
+      <div className="hero__section__buttons">
+        <HeroStickyJump btnColor={buttonColor} />
+        <HeroStickyButton />
+      </div>
     </section>
   );
 };

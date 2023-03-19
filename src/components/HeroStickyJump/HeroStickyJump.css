@@ -1,0 +1,22 @@
+.hero_sticky_jump {
+      background-color: royalblue;
+      border:none;
+      border-radius: 50%;
+      align-items: center;
+      padding: 1rem;
+      color: #fff;
+      z-index: 5;
+      animation: jumpAnimation 10s infinite;
+      cursor: pointer;
+}
+
+
+@keyframes jumpAnimation {
+      0%, 20%, 40%, 60%, 80%, 100%{
+            transform: translateY(-1rem);
+      }
+    
+      10%, 30%, 50%, 70%, 90%{
+            transform: translateY(1rem);
+      }
+}

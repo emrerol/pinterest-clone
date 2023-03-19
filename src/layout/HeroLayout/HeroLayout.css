@@ -1,26 +1,92 @@
 .hero__section {
-      height: 30vh;
+      display: flex;
+      flex-direction: column;      
       text-align: center;
-      /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+      justify-content: center;
+      align-items: center;
+      font-size: 4rem;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      overflow-x: hidden;
+
 }
 
-.hero__section > h1 {
-      font-size: 5rem;
-      text-transform: capitalize;
+.hero__section__slide {
+      position: relative;
+      text-align: center;
+      overflow: hidden;
+
 }
+
+.hero__section__slide--images {
+      display: flex;
+      flex-direction: row;
+      gap: 1.6rem;
+      margin-top: 12rem;
+      animation: fadeImagesAnimation 5s ease-ininfinite;
+}
+
+
+.hero__section__buttons{
+      position: fixed;
+      bottom: 0;
+      right: 0;
+}
+
+.hero__section__slide--text {
+      word-spacing: 130%;
+      letter-spacing: 110%;
+      position: fixed;
+      top: 42.5%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 15;
+}
+
 
 .hero__section span {
-      margin-top: .6rem;
+      margin-top: .4rem;
       display: block;
-      font-size: 5rem;
+      font-size: 6rem;
       font-weight: bold;     
-      animation: fadeTextAnimation 1s ease-in
-}
+      animation: fadeTextAnimation 1s ease-in, fadeOutTextAnimation 1s ease-out;
+      animation-delay: 0s, 3s;
+
+} 
 
 
 @keyframes fadeTextAnimation {
       0%{
          opacity: .95;
+            transform: translateY(5rem);
+      }
+
+
+      100% {
+            opacity: 1;
+            transform: translateY(0);
+      }
+}
+
+@keyframes fadeOutTextAnimation {
+      0%{
+            opacity: 1;
+            transform: translateY(0);
+      }
+
+      100% {
+            opacity:0.3;
+            transform: translateY(-4rem);
+      }
+}
+
+
+
+
+
+
+@keyframes fadeImagesAnimation {
+      0%{
+         opacity: .5;
             transform: translateY(5rem);
       }
 
@@ -31,8 +97,6 @@
       }
 }
 
-.hero__section button{
-      position: absolute;
-      bottom: 0;
-}
+
+
 

@@ -4,10 +4,12 @@ import HeroLayout from "./layout/HeroLayout/HeroLayout";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <HeroLayout />
-    </div>
+    <>
+      <div className="first" style={{ overflow: "hidden", height: "100vh" }}>
+        <Header />
+        <HeroLayout />
+      </div>
+    </>
   );
 }
 
